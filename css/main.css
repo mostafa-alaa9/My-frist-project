@@ -1,3 +1,30 @@
-body{
-  background-color: #eee;
+*{
+    box-sizing: border-box;
+    margin: 0;
 }
+.parent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.parent div{
+    padding: 20px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size:20px; 
+    width: 100%;
+    margin-bottom: 5px;
+}
+@media (min-width:768px){
+    .parent div{
+      width: calc(50% - 10px);   
+    } 
+}   
+@media (min-width:992px){
+    .parent div{
+      width: calc(25% - 5px);   
+    } 
+}  
